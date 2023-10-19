@@ -1007,4 +1007,13 @@ menu "LVGL TFT Display controller"
         default 1 if LV_I2C_DISPLAY_PORT_1
         default 0
 
+    menu "Display Resolution"
+    visible if LVGL_VERSION_MAJOR >= 8
+        config LV_HOR_RES_MAX
+            int "Display hor size"
+            default 240
+        config LV_VER_RES_MAX
+            int "Display ver size"
+            default 240
+    endmenu
 endmenu
